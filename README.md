@@ -1,14 +1,14 @@
 # PhotoRepo
 ### A command-line image repository program!
 
-####Supports:
+#### Supports:
 <ul>
 	<li> Bulk uploading, downloading, and deletion of image files </li>
 	<li> Public images discoverable and downloadable by other users </li>
 	<li> Private images discoverable and downloadable only by you </li>
 </ul>
 
-####Originally made for the Fall 2021 Shopify Developer Intern Challenge.
+#### Originally made for the Fall 2021 Shopify Developer Intern Challenge.
 
 ## Requirements
 ### Python 3
