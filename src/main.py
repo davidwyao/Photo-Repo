@@ -9,7 +9,10 @@ server_interface = firebase_controller()
 user_auth = user_auth(server_interface)
 file_io = file_io(server_interface)
 
+while(True):
+    if not user_auth.prompt_login():
+        break
+    file_io.prompt_activity()
 
-user_auth.prompt_login()
-file_io.prompt_upload()
-file_io.prompt_download()
+print("Exiting program.")
+exit()

@@ -6,22 +6,32 @@ class user_auth:
 
     def prompt_login(self):
         while True:
-            action = input("Login or register? (L/R): ")
-            if action != "L" and action != "R":
-                print("Invalid action! Please enter L or R.")
+            print("")
+            self.logout()
+            action = input("Welcome!\n"
+                "Enter 'l' to login.\n"
+                "Enter 'r' to register.\n"
+                "Enter 'x' to exit: ")
+
+            if action not in ["l", "r", "x"]:
+                print("Invalid input!")
                 continue
+
+            if action == "x":
+                return False
 
             username = input("Please enter your email: ")
             password = input("Please enter your password: ")
 
-            if action == "L":
+            if action == "l":
                 if self.login(username, password):
-                    break
+                    return True
                 else:
                     print("Login failed!")
-            elif action == "R":
+
+            elif action == "r":
                 if self.signup(username, password):
-                    break
+                    return True
                 else:
                     print("Registration failed!")
 
@@ -31,5 +41,5 @@ class user_auth:
     def signup(self, email, password):
         return self.server_io.signup(email, password)
 
-    def signout(self):
-        self.server_io.signout()
+    def logout(self):
+        self.server_io.logout()
