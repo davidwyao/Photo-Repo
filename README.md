@@ -8,8 +8,6 @@
 	<li> Private images discoverable and downloadable only by you </li>
 </ul>
 
-#### Originally made for the Fall 2021 Shopify Developer Intern Challenge.
-
 ## Requirements
 ### Python 3
 This program was tested using Python 3.9.5.
